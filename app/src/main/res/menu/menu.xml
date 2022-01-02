@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 <item android:id="@+id/item1"
-    android:title="uczen"></item>
+    android:title="uczen"
+    android:icon="@drawable/ic_uczen_24"></item>
+    <item android:id="@+id/item2"
+        android:title="nauczuciel"
+        android:icon="@drawable/ic_nauczyciel_24"></item>
+    <item android:id="@+id/item3"
+        android:title="obsługa"
+        android:icon="@drawable/ic_obsluga_24"></item>
 </menu>
