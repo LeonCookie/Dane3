@@ -4,14 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:label=""
 
     tools:context=".MainActivity">
+
     <FrameLayout
 
         android:id="@+id/fragmentContainer"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="601dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="312dp"
+            android:gravity="center"
+            android:text="Prosze wybrac katogorie"
+            android:textColor="@color/teal_700"
+            android:textSize="50dp"></TextView>
     </FrameLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -19,7 +33,10 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_alignParentBottom="true"
-        app:menu="@menu/menu">
+        app:menu="@menu/menu"
+        android:background="@color/teal_700"
+        app:itemTextColor="@color/white"
+        >
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 
