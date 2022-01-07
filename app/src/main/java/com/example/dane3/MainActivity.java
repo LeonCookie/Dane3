@@ -1,18 +1,34 @@
 package com.example.dane3;
 
+import android.annotation.SuppressLint;
+import android.os.Build;
+import android.os.Bundle;
+import android.view.MenuItem;
+import android.widget.ListView;
+
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
-import android.os.Bundle;
-import android.view.MenuItem;
-
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+import java.io.BufferedReader;
+import java.io.InputStream;
 
 public class MainActivity extends AppCompatActivity {
 
+    String[] UczenList;
+
+    InputStream inputStreamCounterUczen;
+    BufferedReader bufferedReaderCounterUczen;
+
+    InputStream inputStreamLoaderUczen;
+    BufferedReader BufferedReaderLoaderUczen;
     
     BottomNavigationView bottomNavigationView;
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,5 +58,16 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
+
+
+        //========-=========
+        ListView listView= (ListView) findViewById(R.id.litsview_fragment1);
+        inputStreamCounterUczen = this.getResources().openRawResource(R.raw.daneUczen);
+
+
+
+
+
+
     }
 }
